@@ -1,1 +1,1 @@
-Repo of CS1 Labs
+Repo of CS1 Labs and Assignments

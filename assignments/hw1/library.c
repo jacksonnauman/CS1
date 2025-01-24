@@ -34,16 +34,16 @@ int main(void) {
     printf("Please input the number of books: ");
     scanf("%d", &bookNum);
     getchar(); // consume newline character
-    Book *books = malloc(sizeof(Book) * bookNum);
+    Book *books = malloc(sizeof(Book) * bookNum); // allocate memory for number of books
     if (books == NULL) { // error check
         printf("Memory allocation failed\n");
         return -1;
     }
     for (int i = 0; i < bookNum; i++) { // iterate over every book
+        // get info for every book - im choosing to ignore the newline in fgets strings
         printf("Enter the details for book %d\n", i + 1);
         printf("Title: ");
         fgets(books[i].title, 100, stdin);
-        // books[i].title[strcspn(books[i].title, "\n")] = '\0';
         printf("Author: ");
         fgets(books[i].author, 100, stdin);
         while (1) {
@@ -57,13 +57,15 @@ int main(void) {
             break;
         }
     }
-    bubbleSort(books, bookNum);
+    bubbleSort(books, bookNum); // sort books by year
+    // print out book inventory data
     printf("Libary Inventory (sorted by year of publication)\n");
     for (int i = 0; i < bookNum; i++) {
         printf("%d. Title: %s", i + 1, books[i].title);
         printf("   Author: %s", books[i].author);
         printf("   Year: %d\n\n", books[i].publishDate);
     }
+    // end program
     free(books);
     return 0;
 }

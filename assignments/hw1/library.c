@@ -46,7 +46,7 @@ int main(void) {
         fgets(books[i].title, 100, stdin);
         printf("Author: ");
         fgets(books[i].author, 100, stdin);
-        while (1) {
+        while (1) { // error checking for valid year
             printf("Year: ");
             scanf("%d", &books[i].publishDate);
             getchar(); // consume newline character

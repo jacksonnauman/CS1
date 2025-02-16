@@ -1,0 +1,8 @@
+1 "The Great Gatsby" Scott Fitzgerald
+1 "1984" George Orwell
+3 "The Catcher in the Rye" Jerome Salinger
+2 "1984" George Orwell
+3 "1984" George Orwell
+1 "To Kill a Mockingbird" Harper Lee
+4
+5
